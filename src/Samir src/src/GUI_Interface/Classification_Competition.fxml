@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI_Interface.Classification_CompetitionController">
+   <children>
+      <TableView fx:id="table_liste_competition" layoutX="24.0" layoutY="24.0" onMouseClicked="#getSelected" prefHeight="223.0" prefWidth="822.0">
+         <columns>
+            <TableColumn fx:id="col_desgniation" prefWidth="115.0" text="Classement" />
+            <TableColumn fx:id="col_datec" prefWidth="154.0" text="Nom Equipe" />
+            <TableColumn fx:id="col_dated" prefWidth="176.0" text="Jouer" />
+            <TableColumn fx:id="col_nbeq" prefWidth="121.0" text="GANGNE" />
+            <TableColumn fx:id="col_catg" prefWidth="157.0" text="NULL" />
+            <TableColumn fx:id="col_complex" prefWidth="95.0" text="PERDU" />
+         </columns>
+      </TableView>
+      <PieChart layoutX="435.0" layoutY="266.0" prefHeight="327.0" prefWidth="379.0" />
+   </children>
+</AnchorPane>

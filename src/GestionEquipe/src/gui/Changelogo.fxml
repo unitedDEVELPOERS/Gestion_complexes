@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="384.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ChangelogoController">
+   <children>
+      <ImageView fx:id="v1" fitHeight="150.0" fitWidth="200.0" layoutX="8.0" layoutY="14.0" onMousePressed="#v1c" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="v3" fitHeight="150.0" fitWidth="200.0" layoutX="400.0" onMousePressed="#v3c" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="v2" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="14.0" onMousePressed="#v2c" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="v5" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="156.0" onMousePressed="#v5c" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="v4" fitHeight="150.0" fitWidth="200.0" layoutX="8.0" layoutY="164.0" onMousePressed="#v4c" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="v6" fitHeight="150.0" fitWidth="193.0" layoutX="404.0" layoutY="156.0" onMousePressed="#v6c" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="valider" layoutX="238.0" layoutY="323.0" mnemonicParsing="false" onAction="#onvalide" prefHeight="47.0" prefWidth="118.0" text="retour" />
+   </children>
+</AnchorPane>

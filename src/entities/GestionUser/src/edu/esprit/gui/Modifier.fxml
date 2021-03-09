@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="569.0" prefWidth="1014.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.FXMLController">
+   <children>
+      <ImageView fitHeight="589.0" fitWidth="1021.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ressource/9.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="14.0" layoutY="37.0" prefHeight="525.0" prefWidth="920.0" style="-fx-background-color: transparent;">
+         <children>
+            <Button fx:id="btRetour" layoutX="33.0" layoutY="13.0" mnemonicParsing="false" onAction="#Retour" prefHeight="38.0" prefWidth="94.0" style="-fx-background-color: #8395a7;" text="Retour" textFill="WHITE" />
+            <Label layoutX="209.0" layoutY="63.0" text="Vos informations personnels" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="29.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfMatricule" layoutX="58.0" layoutY="178.0" prefHeight="31.0" prefWidth="222.0" promptText="ef1sf7e1f" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="60.0" layoutY="158.0" text="Matricule fiscale" textFill="#fbfcff">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfRaison" layoutX="60.0" layoutY="267.0" prefHeight="31.0" prefWidth="222.0" promptText="hgfjgkghj;g" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="60.0" layoutY="247.0" text="Raison sociale" textFill="#fbfcff">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfEmail" layoutX="428.0" layoutY="178.0" prefHeight="31.0" prefWidth="222.0" promptText="****@*****.com" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="btAnnuler" layoutX="163.0" layoutY="351.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="198.0" style="-fx-background-color: #8395a7;" text="Annuler" textFill="#fcfcfc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btEnregistrer" layoutX="435.0" layoutY="351.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="31.0" prefWidth="177.0" style="-fx-background-color: #8395a7;" text="Enregistrer" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="428.0" layoutY="158.0" text="Email" textFill="#f2f2f2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="430.0" layoutY="237.0" text="Mot de passe" textFill="#fbfcff">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="tfMdp" layoutX="428.0" layoutY="257.0" prefHeight="31.0" prefWidth="222.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

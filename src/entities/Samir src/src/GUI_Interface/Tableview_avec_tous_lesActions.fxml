@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="1337.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI_Interface.Tableview_avec_tous_lesActionsController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="20.0" layoutY="26.0" prefHeight="579.0" prefWidth="423.0" style="-fx-background-color: #C4D7ED;">
+         <children>
+            <Button layoutX="14.0" layoutY="495.0" mnemonicParsing="false" onAction="#Add_COMP" prefHeight="40.0" prefWidth="84.0" style="-fx-background-color: #375D81;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="107.0" layoutY="495.0" mnemonicParsing="false" onAction="#Edit" prefHeight="40.0" prefWidth="92.0" style="-fx-background-color: #375D81;" text="Update" textFill="#fcf8f8">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="204.0" layoutY="495.0" mnemonicParsing="false" onAction="#Delete" prefHeight="40.0" prefWidth="84.0" style="-fx-background-color: #375D81;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txt_nbeq" layoutX="220.0" layoutY="244.0" prefHeight="30.0" prefWidth="180.0" promptText="*nombre equipes partciper*" />
+            <TextField fx:id="txt_comp" layoutX="220.0" layoutY="341.0" prefHeight="30.0" prefWidth="180.0" promptText="*Complexe*" />
+            <TextField fx:id="txt_des" layoutX="220.0" layoutY="155.0" prefHeight="23.0" prefWidth="180.0" promptText="*entrer le degniation*" />
+            <Label layoutX="70.0" layoutY="159.0" text="Desgniation" />
+            <Label layoutX="70.0" layoutY="300.0" text="Categorie" />
+            <Label layoutX="69.0" layoutY="251.0" text="Nombres equipes" />
+            <Label layoutX="70.0" layoutY="201.0" text="Date debut" />
+            <Label layoutX="70.0" layoutY="348.0" text="Complexe" />
+            <JFXDatePicker fx:id="txt_dd" layoutX="223.0" layoutY="189.0" prefHeight="25.0" prefWidth="180.0" />
+            <Label layoutX="72.0" layoutY="402.0" text="prix" />
+            <TextField fx:id="txt_prix" layoutX="220.0" layoutY="396.0" prefHeight="30.0" prefWidth="180.0" promptText="*Complexe*" />
+            <ComboBox fx:id="combo" layoutX="222.0" layoutY="296.0" prefHeight="25.0" prefWidth="174.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_liste_competition" layoutX="445.0" layoutY="106.0" onMouseClicked="#getSelected" prefHeight="474.0" prefWidth="886.0">
+         <columns>
+            <TableColumn fx:id="col_desgniation" prefWidth="115.0" text="Desgniation" />
+            <TableColumn fx:id="col_datec" prefWidth="154.0" text="Date creation" />
+            <TableColumn fx:id="col_dated" prefWidth="176.0" text="Date Debut" />
+            <TableColumn fx:id="col_nbeq" prefWidth="121.0" text="Nombre des equipes" />
+            <TableColumn fx:id="col_catg" prefWidth="157.0" text="Categorie" />
+            <TableColumn fx:id="col_complex" prefWidth="95.0" text="Complexe" />
+            <TableColumn fx:id="col_prix" prefWidth="75.0" text="prix" />
+         </columns>
+      </TableView>
+      <TextField fx:id="filterField" layoutX="454.0" layoutY="63.0" promptText="Search" />
+   </children>
+</AnchorPane>
