@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ListequipeController">
+   <children>
+      <ListView fx:id="listequipe" layoutX="65.0" layoutY="71.0" onEditStart="#list" prefHeight="409.0" prefWidth="335.0" />
+      <ImageView fx:id="imageview" fitHeight="150.0" fitWidth="200.0" layoutX="428.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true" />
+      <ListView fx:id="cequipe" layoutX="619.0" layoutY="71.0" onEditStart="#list" prefHeight="409.0" prefWidth="335.0" />
+      <Button fx:id="retour" layoutX="74.0" layoutY="515.0" mnemonicParsing="false" onAction="#retourmenu" prefHeight="40.0" prefWidth="128.0" text="Retour" />
+      <Button fx:id="demande" layoutX="816.0" layoutY="515.0" mnemonicParsing="false" onAction="#demandeequipe" prefHeight="40.0" prefWidth="128.0" text="Demande" />
+      <Button fx:id="bchercher" layoutX="451.0" layoutY="313.0" mnemonicParsing="false" onAction="#chercherequipe" prefHeight="40.0" prefWidth="128.0" text="Chercher" />
+      <TextField fx:id="chercher" layoutX="428.0" layoutY="211.0" prefHeight="40.0" prefWidth="173.0" />
+      <Label fx:id="idequipechercher" layoutX="448.0" layoutY="168.0" prefHeight="21.0" prefWidth="134.0" text="Nom De L'équipe :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="selectequipe" layoutX="690.0" layoutY="525.0" prefHeight="21.0" prefWidth="87.0" text="SELECT Equipe" textFill="RED" />
+   </children>
+</AnchorPane>
