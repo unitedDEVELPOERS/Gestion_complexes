@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="edu.esprit.gui.AcceuilPropController">
+   <children>
+      <ImageView fitHeight="578.0" fitWidth="1001.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ressource/9.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="45.0" layoutY="17.0" prefHeight="534.0" prefWidth="912.0">
+         <children>
+            <ImageView fitHeight="142.0" fitWidth="239.0" layoutX="48.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Ressource/ARB-WP07.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="152.0" fitWidth="252.0" layoutX="484.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Ressource/unnamed.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="152.0" fitWidth="246.0" layoutX="56.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Ressource/récompense-professionnelle-de-trophée-du-football-du-football-sur-le-champ-de-stade-98643563.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="ifArbitre" layoutX="70.0" layoutY="192.0" mnemonicParsing="false" onAction="#GestionArbitre" style="-fx-background-color: transparent;" text="Vos Arbitre" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="56.0" layoutY="426.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Vos Competitions" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="560.0" layoutY="192.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Vos Terrains" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #8395a7;" text="Retour" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="233.0" text="Bienvenue dans botre univers" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
