@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="1270.0" style="-fx-background-color: #99ddff;" stylesheets="@../../../styles/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.TerrainsListController">
+   <children>
+      <TableView fx:id="tableTerrain" layoutX="10.0" layoutY="10.0" prefHeight="470.0" prefWidth="1189.0" AnchorPane.rightAnchor="15.400000000000091" AnchorPane.topAnchor="10.0">
+         <columns>
+            <TableColumn fx:id="colNom" maxWidth="1.7976931348623157E308" prefWidth="230.4000182747841" text="Terrain" />
+            <TableColumn fx:id="colCategorie" maxWidth="1.7976931348623157E308" prefWidth="206.40005493164062" text="Catégorie" />
+            <TableColumn fx:id="colPrix" maxWidth="1.7976931348623157E308" prefWidth="179.20004272460938" text="Prix_location" />
+            <TableColumn fx:id="colHOuv" maxWidth="1.7976931348623157E308" prefWidth="192.79998779296875" text="Heure_ouverture" />
+            <TableColumn fx:id="colHFerm" maxWidth="1.7976931348623157E308" prefWidth="183.99993896484375" text="Heure_fermeture" />
+            <TableColumn fx:id="colAct" prefWidth="215.20013427734375" />
+         </columns>
+      </TableView>
+      <Pane fx:id="paneDetails" layoutX="10.0" layoutY="10.0" prefHeight="447.0" prefWidth="919.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="img" fitHeight="183.0" fitWidth="413.0" layoutX="173.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+            <TableView fx:id="tableReservations" layoutX="775.0" layoutY="142.0" prefHeight="309.0" prefWidth="336.0">
+               <columns>
+                  <TableColumn fx:id="colClient" editable="false" prefWidth="192.79998779296875" text="                      Client" />
+                  <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="136.0" text="                Date" />
+                  <TableColumn fx:id="colHeure" prefWidth="94.39990234375" text="         Heure" />
+                  <TableColumn fx:id="colEtat" prefWidth="96.800048828125" text="          Etat" />
+               </columns>
+            </TableView>
+            <JFXDatePicker layoutX="943.0" layoutY="72.0" />
+            <Pane layoutX="48.0" layoutY="221.0" prefHeight="274.0" prefWidth="621.0">
+               <children>
+                  <Text fx:id="lbDesignation" fill="#1c0101" layoutX="21.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font name="Arial" size="34.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="taDescription" editable="false" layoutX="26.0" layoutY="89.0" prefHeight="114.0" prefWidth="570.0" style="-fx-background-color: transparent;" />
+                  <Label fx:id="lbOuv" layoutX="144.0" layoutY="64.0" text="Label" />
+                  <Label fx:id="lbFerm" layoutX="285.0" layoutY="64.0" text="Label" />
+                  <Label fx:id="lbPrix" layoutX="27.0" layoutY="247.0" text="Label" textFill="#130101" />
+                  <Label fx:id="lbAdresse" layoutX="96.0" layoutY="216.0" text="Label" />
+                  <Label layoutX="26.0" layoutY="64.0" text="Horaire du travail :" />
+                  <Label layoutX="27.0" layoutY="216.0" text="Adresse :" />
+                  <Label layoutX="227.0" layoutY="64.0" text="-" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

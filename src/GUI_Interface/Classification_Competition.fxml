@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="697.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI_Interface.Classification_CompetitionController">
+   <children>
+      <ImageView fitHeight="663.0" fitWidth="956.0" layoutY="-129.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/mm2.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table_liste_resultats" layoutX="89.0" layoutY="181.0" onMouseClicked="#getSelected" prefHeight="225.0" prefWidth="778.0">
+         <columns>
+            <TableColumn fx:id="col_nomeq" prefWidth="154.0" text="Nom Equipe" />
+            <TableColumn fx:id="col_j" prefWidth="176.0" text="Jouer" />
+            <TableColumn fx:id="col_G" prefWidth="121.0" text="GANGNE" />
+            <TableColumn fx:id="col_n" prefWidth="157.0" text="NULL" />
+            <TableColumn fx:id="col_p" prefWidth="95.0" text="PERDU" />
+            <TableColumn fx:id="col_points" prefWidth="75.0" text="Points" />
+         </columns>
+      </TableView>
+      <PieChart fx:id="pie_chart" layoutX="240.0" layoutY="406.0" prefHeight="307.0" prefWidth="619.0" title="Statstique du resultas d'equipe" />
+      <Label layoutX="19.0" layoutY="441.0" text="Equipe" textFill="#1b1a1a" />
+      <Label layoutX="15.0" layoutY="532.0" prefHeight="17.0" prefWidth="44.0" text="Points" textFill="#0a0a0a" />
+      <TextField fx:id="filterField" layoutX="131.0" layoutY="22.0" prefHeight="25.0" prefWidth="128.0" promptText="Chercher par Equipe" />
+      <Label layoutX="14.0" layoutY="21.0" text="Choisi equipe " textFill="#fcfafa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_aff" layoutX="32.0" layoutY="614.0" mnemonicParsing="false" onAction="#btn_aff" text="Afficher les Statstiques" />
+      <TextField fx:id="txt_eq" layoutX="19.0" layoutY="466.0" />
+      <TextField fx:id="txt_p" layoutX="14.0" layoutY="570.0" prefHeight="25.0" prefWidth="149.0" />
+   </children>
+</AnchorPane>
