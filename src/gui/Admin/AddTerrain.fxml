@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="paneUpdate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="1191.0" style="-fx-background-color: #99ddff; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.AddTerrainController">
+   <children>
+      <TextField fx:id="tfNom" layoutX="248.0" layoutY="44.0" prefHeight="26.0" prefWidth="680.0" promptText="Nom du terrain" style="-fx-background-radius: 20;" />
+      <TextField fx:id="tfImage" editable="false" layoutX="251.0" layoutY="287.0" prefHeight="26.0" prefWidth="590.0" promptText="Image" style="-fx-background-radius: 20;" />
+      <ScrollPane layoutX="248.0" layoutY="134.0" prefHeight="87.0" prefWidth="678.0" style="-fx-background-color: #FFFFFF;">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="657.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <HBox layoutX="-124.0" layoutY="8.0" prefHeight="114.0" prefWidth="529.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <JFXTextArea fx:id="taDesc" prefHeight="114.0" prefWidth="647.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="tfPrix" layoutX="251.0" layoutY="333.0" onMouseClicked="#loadGouvernorat" onTouchPressed="#inputPrix" prefHeight="26.0" prefWidth="675.0" promptText="Prix de location" style="-fx-background-radius: 20;" />
+      <Pane prefHeight="5.0" prefWidth="200.0" />
+      <JFXTimePicker fx:id="timeOuvert" defaultColor="#1075da" layoutX="251.0" layoutY="381.0" prefHeight="28.0" prefWidth="332.0" />
+      <JFXTimePicker fx:id="timeFerm" defaultColor="#1075da" layoutX="595.0" layoutY="381.0" prefHeight="28.0" prefWidth="332.0" />
+      <ComboBox fx:id="cbCategorie" layoutX="248.0" layoutY="91.0" onAction="#setCategorie" prefHeight="26.0" prefWidth="679.0" promptText="Catégorie" style="-fx-background-radius: 20; -fx-background-color: #FFFFFF;" />
+      <Button fx:id="btnEnregistrer" layoutX="764.0" layoutY="459.0" mnemonicParsing="false" onAction="#btnEnregistrer" prefHeight="26.0" prefWidth="164.0" style="-fx-background-radius: 20; -fx-background-color: #ccf5ff;" text="Enregistrer">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/enregistrer.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ComboBox fx:id="cbGouvernorat" layoutX="249.0" layoutY="240.0" prefHeight="26.0" prefWidth="332.0" promptText="Ville" style="-fx-background-radius: 20; -fx-background-color: #FFFFFF;" />
+      <TextField layoutX="590.0" layoutY="240.0" prefHeight="26.0" prefWidth="338.0" promptText="Localité" style="-fx-background-radius: 20;" />
+      <Button fx:id="btnImage" layoutX="846.0" layoutY="287.0" mnemonicParsing="false" onAction="#selectImage" prefHeight="26.0" prefWidth="80.0" style="-fx-background-radius: 20; -fx-background-color: #ccf5ff;" text="Choisir..." />
+      <ImageView fx:id="btnClose" fitHeight="35.0" fitWidth="38.0" layoutX="1139.0" layoutY="16.0" onMouseClicked="#btnClose" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/cancel_48px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

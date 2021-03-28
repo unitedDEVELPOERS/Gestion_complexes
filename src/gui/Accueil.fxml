@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Client.AccueilController">
+   <top>
+      <HBox prefHeight="59.0" prefWidth="1315.0" style="-fx-background-color: #9999ff;" styleClass="white-background" stylesheets="@../values/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="51.0" prefWidth="206.0" text="Nos terrains">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="318.0">
+               <children>
+                  <TextField prefHeight="26.0" prefWidth="258.0" promptText="Search" stylesheets="@../values/styles.css">
+                     <styleClass>
+                        <String fx:value="transparent" />
+                        <String fx:value="round-layout" />
+                     </styleClass>
+                  </TextField>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/search.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #9999ff;" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Ahmed">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="831.0" prefWidth="227.0" styleClass="white-background" stylesheets="@../values/styles.css" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="39.0" prefWidth="198.0" text="Suggestion">
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin></Label>
+            <ScrollPane prefHeight="210.0" prefWidth="1150.0" styleClass="transparent" stylesheets="@../values/styles.css">
+               <content>
+                  <HBox fx:id="suggestion" alignment="CENTER" prefHeight="188.0" prefWidth="1318.0" spacing="15.0" styleClass="transparent" stylesheets="@../values/styles.css">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding></HBox>
+               </content>
+            </ScrollPane>
+            <Label layoutX="25.0" layoutY="10.0" prefHeight="39.0" prefWidth="198.0" text="Nos terrains">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <ScrollPane prefHeight="503.0" prefWidth="1150.0" styleClass="transparent" stylesheets="@../values/styles.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="terrainsContainer" prefHeight="25.0" prefWidth="2.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

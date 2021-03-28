@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Client.AccueilController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="39.0" prefWidth="198.0" text="Suggestion">
+               <VBox.margin>
+                  <Insets left="15.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Bodoni MT Bold" size="18.0" />
+               </font></Label>
+            <ScrollPane prefHeight="243.0" prefWidth="1285.0" styleClass="transparent" stylesheets="@../values/styles.css">
+               <content>
+                  <HBox fx:id="suggestion" alignment="CENTER" prefHeight="201.0" prefWidth="1318.0" spacing="15.0" styleClass="transparent" stylesheets="@../values/styles.css">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding></HBox>
+               </content>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </ScrollPane>
+            <Label layoutX="25.0" layoutY="10.0" prefHeight="39.0" prefWidth="198.0" text="Nos terrains">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <font>
+                  <Font name="Microsoft PhagsPa Bold" size="18.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="438.0" prefWidth="1285.0" styleClass="transparent" stylesheets="@../values/styles.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="terrainsContainer" prefHeight="25.0" prefWidth="2.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+               <VBox.margin>
+                  <Insets bottom="50.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Pane prefHeight="53.0" prefWidth="1315.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnPrecedent" layoutX="515.0" layoutY="3.0" mnemonicParsing="false" onAction="#btnPrecedent" text="&lt;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSuivant" layoutX="560.0" layoutY="3.0" mnemonicParsing="false" onAction="#btnSuivant" text="&gt;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

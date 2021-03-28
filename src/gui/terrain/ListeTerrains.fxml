@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.terrain.ListeTerrainsController">
+   <children>
+      <SplitPane fx:id="spliteList" layoutX="275.0" layoutY="128.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #000066;">
+               <children>
+                  <TableView fx:id="tableTerrain" layoutY="99.0" prefHeight="498.0" prefWidth="1005.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
+                      <TableColumn fx:id="colNom" prefWidth="200.0" text="Nom" />
+                        <TableColumn fx:id="colCategorie" prefWidth="200.0" text="Catégorie" />
+                        <TableColumn fx:id="colPrix" prefWidth="140.0" text="Prix_location" />
+                        <TableColumn fx:id="colHOuv" prefWidth="200.0" text="Heure_ouverture" />
+                        <TableColumn fx:id="colHFerm" maxWidth="195.99995117187495" prefWidth="200.0" text="Heure_fermeture" />
+                        <TableColumn fx:id="colAct" prefWidth="235.9998779296875" />
+                    </columns>
+                  </TableView>
+                  <Pane layoutY="93.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="93.0" />
+                  <Text fill="#f0ecec" layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nos terrains">
+                     <font>
+                        <Font size="59.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnNouveau" layoutX="1116.0" mnemonicParsing="false" onAction="#nouveau" prefHeight="28.0" prefWidth="133.0" text="Nouveau" AnchorPane.leftAnchor="1116.0" AnchorPane.topAnchor="100.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <AnchorPane fx:id="paneNouveau" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1006.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="tfNom" layoutX="176.0" layoutY="152.0" prefHeight="26.0" prefWidth="220.0" promptText="Nom du terrain" />
+            <TextField fx:id="tfImage" layoutX="176.0" layoutY="340.0" prefHeight="26.0" prefWidth="220.0" promptText="Image" />
+            <TextArea fx:id="taDesc" layoutX="175.0" layoutY="240.0" prefHeight="38.0" prefWidth="742.0" promptText="Description" />
+            <TextField fx:id="tfPrix" layoutX="176.0" layoutY="381.0" prefHeight="26.0" prefWidth="220.0" promptText="Prix de location" />
+            <Pane prefHeight="5.0" prefWidth="200.0" />
+            <Pane layoutY="89.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <JFXButton fx:id="btnImage" layoutX="432.0" layoutY="343.0" onAction="#selectImage" prefHeight="28.0" prefWidth="61.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/folder.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXTimePicker fx:id="timeOuvert" layoutX="176.0" layoutY="420.0" prefHeight="28.0" prefWidth="220.0" />
+            <JFXTimePicker fx:id="timeFerm" layoutX="401.0" layoutY="420.0" prefHeight="28.0" prefWidth="220.0" />
+            <JFXButton fx:id="btnEnregistrer" layoutX="175.0" layoutY="492.0" onAction="#ajoutTerrain" prefHeight="26.0" prefWidth="149.0" text="Enregistrer" />
+            <ComboBox fx:id="cbCategorie" layoutX="175.0" layoutY="194.0" onAction="#setCategorie" prefHeight="26.0" prefWidth="220.0" />
+            <Button fx:id="btnRetour1" layoutX="32.0" layoutY="105.0" mnemonicParsing="false" onAction="#retourNouveau" prefHeight="28.0" prefWidth="114.0" text="Retour">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/retour.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane layoutX="413.0" layoutY="5.0" prefHeight="89.0" prefWidth="1006.0" style="-fx-background-color: #000066;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="#f8f7f7" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Créer un terrain">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <ComboBox fx:id="cbGouvernorat" layoutX="175.0" layoutY="295.0" prefHeight="26.0" prefWidth="220.0" />
+            <ComboBox fx:id="cbDelegation" layoutX="436.0" layoutY="295.0" prefHeight="26.0" prefWidth="220.0" />
+            <ComboBox fx:id="cbLocalite" layoutX="699.0" layoutY="296.0" prefHeight="26.0" prefWidth="220.0" />
+            <Pane fx:id="ancheAlert" layoutX="309.0" layoutY="178.0" prefHeight="197.0" prefWidth="386.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneDetails" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="1249.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="img" fitHeight="229.0" fitWidth="220.0" layoutX="30.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane layoutY="96.0" prefHeight="5.0" prefWidth="600.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Text fx:id="lbDesignation" layoutX="283.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="taDescription" layoutX="283.0" layoutY="270.0" prefHeight="118.0" prefWidth="650.0" />
+            <Label fx:id="lbOuv" layoutX="283.0" layoutY="236.0" text="Label" />
+            <Label fx:id="lbFerm" layoutX="466.0" layoutY="236.0" text="Label" />
+            <Label fx:id="lbPrix" layoutX="283.0" layoutY="351.0" text="Label" textFill="#f5f2f2" />
+            <JFXDatePicker fx:id="datePick" defaultColor="#000066" layoutX="283.0" layoutY="434.0" onAction="#refrechListSeances" />
+            <Pane layoutX="425.0" layoutY="14.0" prefHeight="92.0" prefWidth="735.0" style="-fx-background-color: #000066;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="#f0ecec" layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nos terrains">
+                     <font>
+                        <Font size="59.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button fx:id="btnRetour" layoutX="24.0" layoutY="134.0" mnemonicParsing="false" onAction="#retourDetails" prefHeight="28.0" prefWidth="114.0" text="Retour">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/retour.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane layoutX="250.0" layoutY="490.0" prefHeight="64.0" prefWidth="589.0">
+               <children>
+                  <Pane layoutX="29.0" layoutY="18.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: red;">
+                     <children>
+                        <Label fx:id="s1" disable="true" layoutX="13.0" layoutY="5.0" onMouseClicked="#selectSeance" text="06:00" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="92.0" layoutY="19.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label fx:id="s2" disable="true" layoutX="13.0" layoutY="5.0" text="08:00" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="447.0" layoutY="19.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label fx:id="s8" layoutX="13.0" layoutY="6.0" text="20:00" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="387.0" layoutY="19.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label fx:id="s7" layoutX="13.0" layoutY="6.0" text="18:00" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="152.0" layoutY="19.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label fx:id="s3" layoutX="13.0" layoutY="5.0" text="10:00" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="208.0" layoutY="19.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label fx:id="s4" layoutX="11.0" layoutY="6.0" text="12:00" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="268.0" layoutY="19.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label fx:id="s5" layoutX="13.0" layoutY="5.0" text="14:00" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="326.0" layoutY="19.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label fx:id="s6" layoutX="13.0" layoutY="6.0" text="16:00" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="508.0" layoutY="18.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: red;">
+                     <children>
+                        <Label fx:id="s9" layoutX="13.0" layoutY="6.0" text="22:00" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
