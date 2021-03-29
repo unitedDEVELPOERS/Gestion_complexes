@@ -26,6 +26,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -52,12 +53,14 @@ ObservableList<String> ListeChoice=FXCollections.observableArrayList("Gardien","
     @FXML
     private PasswordField tfMdp;
     @FXML
-    private TextField tfEquipe;
+    private Label tfEquipe;
     @FXML
     private TextField tfTelephone;
     @FXML
     private ChoiceBox<String> tfCategorie;
     Client c=new Client();
+    @FXML
+    private TextField tfPrenom1;
 
     /**
      * Initializes the controller class.
@@ -75,7 +78,7 @@ ObservableList<String> ListeChoice=FXCollections.observableArrayList("Gardien","
         tfPrenom.setText(l.get(0).getPrenom());
         tfCategorie.setValue(l.get(0).getPosition());
         tfCategorie.setItems(ListeChoice);
-        tfEquipe.setText(l.get(0).getEquipe());
+        
         tfEmail.setText(l.get(0).getEmail());
         tfMdp.setText(l.get(0).getPwd());
     } catch (SQLException ex) {
@@ -87,7 +90,7 @@ ObservableList<String> ListeChoice=FXCollections.observableArrayList("Gardien","
     @FXML
     private void Retour(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(
-            getClass().getResource("Acceuil.fxml"));
+            getClass().getResource("AcceuilClient.fxml"));
               
                     Parent root;
                 try {

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="edu.esprit.gui.ModifierArbitreController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.ModifierArbitreController">
      <children>
       <ImageView fitHeight="589.0" fitWidth="1021.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -78,5 +78,10 @@
             </Label>
          </children>
       </AnchorPane>
+      <Label fx:id="snom" layoutX="75.0" layoutY="180.0" prefHeight="20.0" prefWidth="134.0" textFill="#cd1212" visible="false" />
+      <Label fx:id="sprenom" layoutX="65.0" layoutY="256.0" prefHeight="20.0" prefWidth="134.0" textFill="#cd1212" visible="false" />
+      <Label fx:id="semail" layoutX="440.0" layoutY="167.0" prefHeight="25.0" prefWidth="75.0" textFill="#cd1212" visible="false" />
+      <Label fx:id="smdp" layoutX="440.0" layoutY="254.0" prefHeight="20.0" prefWidth="85.0" textFill="#cd1212" visible="false" />
+      <Label fx:id="stelephone" layoutX="442.0" layoutY="335.0" prefHeight="20.0" prefWidth="85.0" textFill="#cd1212" visible="false" />
    </children>
 </AnchorPane>

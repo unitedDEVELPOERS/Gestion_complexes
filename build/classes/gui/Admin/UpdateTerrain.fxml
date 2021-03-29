@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1035.0" style="-fx-background-color: #99ddff; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.UpdateTerrainController">
+   <children>
+      <TextArea fx:id="taDesc" layoutX="249.0" layoutY="139.0" prefHeight="82.0" prefWidth="680.0" promptText="Description" />
+      <Pane prefHeight="5.0" prefWidth="200.0" />
+      <JFXTimePicker fx:id="timeOuvert" defaultColor="#1075da" layoutX="251.0" layoutY="381.0" prefHeight="28.0" prefWidth="332.0" style="-fx-background-color: #FFFFFF;" />
+      <JFXTimePicker fx:id="timeFerm" defaultColor="#1075da" layoutX="595.0" layoutY="381.0" prefHeight="28.0" prefWidth="332.0" style="-fx-background-color: #FFFFFF;" />
+      <Button fx:id="btnEnregistrer" layoutX="644.0" layoutY="457.0" mnemonicParsing="false" onAction="#btnEnregistrer" prefHeight="26.0" prefWidth="164.0" text="Enregistrer">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/enregistrer.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnImage" layoutX="830.0" layoutY="287.0" mnemonicParsing="false" onAction="#selectImage" prefHeight="26.0" prefWidth="82.0" text="Choisir..." />
+      <JFXTextField fx:id="tfNom" layoutX="248.0" layoutY="47.0" prefHeight="26.0" prefWidth="680.0" promptText="Nom du terrain" style="-fx-background-color: #FFFFFF;" />
+      <JFXTextField fx:id="tfImage" layoutX="250.0" layoutY="287.0" prefHeight="26.0" prefWidth="566.0" promptText="Image" style="-fx-background-color: #FFFFFF;" />
+      <JFXTextField fx:id="tfPrix" layoutX="248.0" layoutY="335.0" prefHeight="26.0" prefWidth="680.0" promptText="Prix de location" style="-fx-background-color: #FFFFFF;" />
+      <JFXTextField fx:id="tfLocation" layoutX="591.0" layoutY="240.0" prefHeight="26.0" prefWidth="339.0" style="-fx-background-color: #FFFFFF;" />
+      <JFXComboBox fx:id="cbCategorie" layoutX="248.0" layoutY="92.0" prefHeight="26.0" prefWidth="680.0" style="-fx-background-color: #FFFFFF;" />
+      <JFXComboBox fx:id="cbGouvernorat" layoutX="251.0" layoutY="240.0" prefHeight="26.0" prefWidth="332.0" style="-fx-background-color: #FFFFFF;" />
+   </children>
+</AnchorPane>

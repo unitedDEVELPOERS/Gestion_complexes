@@ -24,10 +24,23 @@ import javafx.scene.control.Button;
  */
 public class AcceuilController implements Initializable {
 
-    @FXML
     private Button login;
     @FXML
-    private Button btAdmin;
+    private Button btAcceuil;
+    @FXML
+    private Button btReservation;
+    @FXML
+    private Button btEquipe;
+    @FXML
+    private Button btBoutique;
+    @FXML
+    private Button btCompte;
+    @FXML
+    private Button btfoot;
+    @FXML
+    private Button bthand;
+    @FXML
+    private Button btbasket;
 
     /**
      * Initializes the controller class.
@@ -46,7 +59,7 @@ public class AcceuilController implements Initializable {
                     Parent root;
                 try {
                     root = loader.load();
-                      login.getScene().setRoot(root);
+                      btCompte.getScene().setRoot(root);
                 } catch (IOException ex) {
                     Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -54,14 +67,23 @@ public class AcceuilController implements Initializable {
         
     }
 
-    private void Inscrire(ActionEvent event) {
+   
+
+  
+
+    @FXML
+    private void Acceuil(ActionEvent event) {
+    }
+
+    @FXML
+    private void Reservation(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(
-            getClass().getResource("AddClient.fxml"));
+            getClass().getResource("AuthentificationClient.fxml"));
               
                     Parent root;
                 try {
                     root = loader.load();
-                      login.getScene().setRoot(root);
+                      btAcceuil.getScene().setRoot(root);
                 } catch (IOException ex) {
                     Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -69,18 +91,74 @@ public class AcceuilController implements Initializable {
     }
 
     @FXML
-    private void Admin(ActionEvent event) {
-         FXMLLoader loader = new FXMLLoader(
-            getClass().getResource("AjouterArbitre.fxml"));
+    private void Complexe(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("AuthentificationProprietaire.fxml"));
               
                     Parent root;
                 try {
                     root = loader.load();
-                      login.getScene().setRoot(root);
+                      btAcceuil.getScene().setRoot(root);
                 } catch (IOException ex) {
                     Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
                 }
         
+    }
+
+    @FXML
+    private void boutique(ActionEvent event) {
+       FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("AuthentificationClient.fxml"));
+              
+                    Parent root;
+                try {
+                    root = loader.load();
+                      btAcceuil.getScene().setRoot(root);
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }
+
+    @FXML
+    private void foot(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("AuthentificationClient.fxml"));
+              
+                    Parent root;
+                try {
+                    root = loader.load();
+                      btAcceuil.getScene().setRoot(root);
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }
+
+    @FXML
+    private void hand(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("AuthentificationClient.fxml"));
+              
+                    Parent root;
+                try {
+                    root = loader.load();
+                      btAcceuil.getScene().setRoot(root);
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }
+
+    @FXML
+    private void basket(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("AuthentificationClient.fxml"));
+              
+                    Parent root;
+                try {
+                    root = loader.load();
+                      btAcceuil.getScene().setRoot(root);
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
+                }
     }
     
 }

@@ -9,54 +9,63 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="edu.esprit.gui.AuthentificationArbitreController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.AuthentificationArbitreController">
     <children>
-      <ImageView fx:id="btArbitre" fitHeight="570.0" fitWidth="1000.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="773.0" fitWidth="1369.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Ressource/9.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="59.0" layoutY="98.0" prefHeight="361.0" prefWidth="492.0" style="-fx-border-color: #778ca3; -fx-border-width: 0px 4px 4px 4px;">
+      <Label layoutX="171.0" layoutY="141.0" prefHeight="411.0" prefWidth="490.0" style="-fx-background-color: #f7f1e3; -fx-opacity: 0.2; -fx-border-color: white; -fx-border-width: 0px 4px 4px 4px;" />
+      <AnchorPane layoutX="133.0" layoutY="82.0" prefHeight="68.0" prefWidth="548.0" style="-fx-background-color: transparent;">
          <children>
-            <PasswordField fx:id="mdp" layoutX="155.0" layoutY="228.0" prefHeight="27.0" prefWidth="214.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="login" layoutX="155.0" layoutY="153.0" prefHeight="27.0" prefWidth="214.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="btLogin" layoutX="192.0" layoutY="273.0" mnemonicParsing="false" onAction="#Login" prefHeight="33.0" prefWidth="109.0" style="-fx-background-color: #8395a7;" text="Login" textFill="#fffdfd">
+            <Button fx:id="btClient" layoutX="39.0" layoutY="26.0" mnemonicParsing="false" onAction="#AuthClient" prefHeight="33.0" prefWidth="144.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Espace Client" textFill="WHITE" />
+            <Button fx:id="btArbitre" layoutX="378.0" layoutY="26.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="150.0" style="-fx-background-color: #f7f1e3; -fx-border-color: #218c74; -fx-border-width: 0px 0px 2px 0px; -fx-opacity: 0.3;" text="Espace Propriétaire" textFill="#218c74">
                <font>
-                  <Font name="Arial Black" size="15.0" />
+                  <Font name="System Bold Italic" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="275.0" layoutY="307.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Cliquer ici" textFill="#fffdfd" underline="true">
-               <font>
-                  <Font name="System Italic" size="14.0" />
-               </font>
-            </Button>
-            <Label layoutX="168.0" layoutY="313.0" text="Mot de passe oublié?" textFill="WHITE" />
-            <ImageView fitHeight="74.0" fitWidth="94.0" layoutX="201.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Ressource/image_preview.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="132.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Ressource/User_icon_BLACK-01.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="133.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Ressource/lock-4.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="201.0" layoutY="107.0" prefHeight="35.0" prefWidth="74.0" text="Login" textFill="#fffdfd">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label fx:id="incorrect" layoutX="73.0" layoutY="180.0" prefHeight="17.0" prefWidth="189.0" textFill="#bf0404" />
-            <Button fx:id="retour" layoutX="404.0" layoutY="34.0" mnemonicParsing="false" onAction="#Retour" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #8395a7;" text="Retour" textFill="WHITE" />
+            <Button fx:id="btProp" layoutX="192.0" layoutY="26.0" mnemonicParsing="false" onAction="#AuthProp" prefHeight="33.0" prefWidth="179.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Espace Propriétaire Complexe" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <Button fx:id="btClient" layoutX="59.0" layoutY="65.0" mnemonicParsing="false" onAction="#AuthClient" prefHeight="33.0" prefWidth="144.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Espace Client" textFill="#fffefe" />
-      <Button fx:id="btProp" layoutX="214.0" layoutY="65.0" mnemonicParsing="false" onAction="#AuthProp" prefHeight="33.0" prefWidth="182.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Espace Propriétaire Complexe" textFill="WHITE" />
-      <Button fx:id="btAdmin" layoutX="407.0" layoutY="65.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="144.0" style="-fx-background-color: #778ca3; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Espace Arbitre" textFill="WHITE" />
+      <Label fx:id="semail" layoutX="321.0" layoutY="299.0" prefHeight="17.0" prefWidth="189.0" textFill="#cd1212" visible="false" />
+      <Label fx:id="smdp" layoutX="315.0" layoutY="363.0" prefHeight="21.0" prefWidth="189.0" textFill="#cd1212" visible="false" />
+      <Button fx:id="btLogin" layoutX="378.0" layoutY="439.0" mnemonicParsing="false" onAction="#Login" prefHeight="33.0" prefWidth="109.0" style="-fx-background-color: #218c74;" text="Login" textFill="#fffdfd">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="mdp" layoutX="325.0" layoutY="386.0" prefHeight="27.0" prefWidth="214.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="310.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ressource/lock-4.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="login" layoutX="325.0" layoutY="327.0" prefHeight="27.0" prefWidth="214.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="309.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ressource/User_icon_BLACK-01.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="81.0" layoutX="372.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ressource/image_preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="379.0" layoutY="243.0" prefHeight="35.0" prefWidth="74.0" text="Login" textFill="#fffdfd">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="incorrect" layoutX="560.0" layoutY="314.0" prefHeight="17.0" prefWidth="189.0" textFill="#bf0404" />
+      
+         
+      <Label layoutX="322.0" layoutY="483.0" text="Mot de passe oublié?" textFill="WHITE" />
+      <Button fx:id="retour" layoutX="550.0" layoutY="156.0" mnemonicParsing="false" onAction="#Retour" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #218c74;" text="Retour" textFill="WHITE" />
+      <Button layoutX="432.0" layoutY="476.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Cliquer ici" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

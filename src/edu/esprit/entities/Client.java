@@ -9,6 +9,7 @@ package edu.esprit.entities;
  *
  * @author ghara
  */
+
 public class Client extends User{
 
     String nom;
@@ -16,7 +17,7 @@ public class Client extends User{
     int solde_points;
     String position;
     
-    String equipe;
+    int equipe;
 
     public Client() {
         super(null, null);
@@ -28,11 +29,13 @@ public class Client extends User{
         super(email, pwd);
     }
     
-    
+   public Client(int idUser){
+       super(idUser);
+   } 
     
   
 public Client(int idUser, String email, String pwd, String role, String telephone,String nom, 
-        String prenom, int solde_points, String position,String equipe) {
+        String prenom, int solde_points, String position,int equipe) {
       
       super(idUser,email,pwd,role,telephone);
       this.equipe=equipe;
@@ -45,9 +48,9 @@ public Client(int idUser, String email, String pwd, String role, String telephon
 
 
 
-       public Client(String email, String pwd,String telephone, String nom, String prenom,String equipe,int solde_points,
+       public Client(int idUser,String email, String pwd,String telephone, String nom, String prenom,int equipe,int solde_points,
                String position) {
-        super(email,pwd,telephone);
+        super(idUser,email,pwd,telephone);
       
         this.equipe=equipe;
       this.nom=nom;
@@ -55,9 +58,10 @@ public Client(int idUser, String email, String pwd, String role, String telephon
       this.position=position;
       this.solde_points=solde_points;
        }
+       
     
-     public Client(String email ,String pwd,String telephone,String nom,String prenom,String equipe,String position){
-         super(email,pwd,telephone);
+     public Client(int idUser, String email ,String pwd,String telephone,String nom,String prenom,int equipe,String position){
+         super(idUser,email,pwd,telephone);
          this.nom=nom;
       this.prenom=prenom;
       this.position=position;
@@ -70,12 +74,18 @@ public Client(int idUser, String email, String pwd, String role, String telephon
       this.position=position;
     }
 
+    private Client(int idUser, String email, String pwd, String telephone) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+
     @Override
     public String getEmail() {
         return super.getEmail(); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public String getEquipe() {
+    public int getEquipe() {
         return equipe;
     }
 
@@ -120,7 +130,7 @@ public Client(int idUser, String email, String pwd, String role, String telephon
         super.setEmail(email); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setEquipe(String equipe) {
+    public void setEquipe(int equipe) {
         this.equipe = equipe;
     }
 
@@ -161,9 +171,13 @@ public Client(int idUser, String email, String pwd, String role, String telephon
     }
 
     @Override
+//    public String toString() {
+//        
+//        return super.toString() + "nom=" + nom + ", prenom=" + prenom + ", solde_points=" + solde_points + ", position=" + position + ", telephone=" + telephone + ", equipe=" + equipe ;
+//    }
     public String toString() {
         
-        return super.toString() + "nom=" + nom + ", prenom=" + prenom + ", solde_points=" + solde_points + ", position=" + position + ", telephone=" + telephone + ", equipe=" + equipe ;
+        return nom +" "+  prenom  ;
     }
 
     

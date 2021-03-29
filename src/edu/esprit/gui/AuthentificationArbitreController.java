@@ -24,6 +24,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javax.swing.JOptionPane;
 
 /**
@@ -48,7 +49,11 @@ public class AuthentificationArbitreController implements Initializable {
     @FXML
     private Button btProp;
     @FXML
-    private Button btAdmin;
+    private Button btArbitre;
+    @FXML
+    private Label semail;
+    @FXML
+    private Label smdp;
 
     /**
      * Initializes the controller class.
@@ -60,16 +65,29 @@ public class AuthentificationArbitreController implements Initializable {
 
     @FXML
     private void Login(ActionEvent event) {
-        
+        String email=login.getText();
         MyConnection con=new MyConnection();
         Connection cnx=con.getConnection();
+         if(email.isEmpty()){
+            semail.setVisible(true);
+            semail.setText("champ vide");
+
+            
+        }else {
         try {
             String arbitre="arbitre";
+            String admin="admin";
             Statement statement=cnx.createStatement();
-            String sql="SELECT* FROM utilisateur WHERE email='"+login.getText()+"' AND password='"+mdp.getText()+"' AND role='"+arbitre+"';";
+            String sql="SELECT* FROM utilisateur WHERE email='"+login.getText()+"' AND password='"+mdp.getText()+"';";
             ResultSet resultset=statement.executeQuery(sql);
             
-            if(resultset.next()){
+             if(resultset.next()){
+             if((resultset.getString(4).equals(arbitre))){
+               
+                 //this.p.setEmail(login.getText());
+                 
+                 
+                
                 FXMLLoader loader = new FXMLLoader(
             getClass().getResource("GestionArbitre.fxml"));
               
@@ -77,10 +95,24 @@ public class AuthentificationArbitreController implements Initializable {
                 try {
                     root = loader.load();
                       login.getScene().setRoot(root);
+                     
                 } catch (IOException ex) {
                     Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
                 }
+            }
+             else if((resultset.getString(4).equals(admin))){
+                 FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("AjouterArbitre.fxml"));
               
+                    Parent root;
+                try {
+                    root = loader.load();
+                      login.getScene().setRoot(root);
+                     
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+             }
                 }
             
         else {
@@ -101,7 +133,7 @@ public class AuthentificationArbitreController implements Initializable {
         }
         
         
-    }
+    }}
 
     @FXML
     private void Retour(ActionEvent event) {

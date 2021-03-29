@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="643.0" prefWidth="1341.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="Controller.Client.MesReservationsController">
+   <children>
+      <ImageView fitHeight="778.0" fitWidth="1341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/background.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableReservations" layoutX="53.0" layoutY="280.0" onMouseClicked="#selectReservation" opacity="0.77" prefHeight="382.0" prefWidth="562.0">
+         <columns>
+            <TableColumn fx:id="colDate" prefWidth="142.40000915527344" text="Date" />
+            <TableColumn fx:id="colHeure" prefWidth="116.0" text="Heure" />
+            <TableColumn fx:id="colTerrain" minWidth="0.0" prefWidth="160.0" text="Terrain" />
+            <TableColumn fx:id="colMontant" prefWidth="140.0" text="Montant" />
+         </columns>
+      </TableView>
+      <Pane layoutX="644.0" layoutY="67.0" prefHeight="596.0" prefWidth="349.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
+         <children>
+            <JFXDatePicker fx:id="datePick" disable="true" layoutX="72.0" layoutY="49.0" prefWidth="207.0" style="-fx-background-color: #FFFFFF;" />
+            <JFXTimePicker fx:id="timePick" disable="true" editable="true" layoutX="71.0" layoutY="118.0" prefWidth="207.0" style="-fx-background-color: #FFFFFF;" />
+            <JFXTextField fx:id="tfTerrain" disable="true" layoutX="72.0" layoutY="191.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #FFFFFF;" />
+            <JFXTextField fx:id="tfMontant" disable="true" layoutX="72.0" layoutY="266.0" prefHeight="30.0" prefWidth="207.0" />
+            <Pane layoutX="14.0" layoutY="481.0" prefHeight="61.0" prefWidth="326.0" style="-fx-background-color: #7f8fa6; -fx-background-radius: 30;">
+               <children>
+                  <Button fx:id="btnAccepter" layoutX="48.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnAccepter" prefHeight="25.0" prefWidth="111.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Accepter">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAnnuler" layoutX="167.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnAnnuler" prefHeight="25.0" prefWidth="111.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Annuler">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <JFXTextField fx:id="tfPart" disable="true" layoutX="70.0" layoutY="361.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #FFFFFF;" />
+         </children>
+      </Pane>
+      <Label layoutX="52.0" layoutY="29.0" prefHeight="28.0" prefWidth="182.0" text="Nouvelles invitations" textFill="#f2eded">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="241.0" prefHeight="28.0" prefWidth="182.0" style="-fx-background-color: black;" text="Historique des réservations" textFill="#f0eded">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listViewInvitations" layoutX="52.0" layoutY="65.0" onMouseClicked="#selectInvitation" prefHeight="154.0" prefWidth="562.0" style="-fx-background-color: #FFFFFF;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ListView>
+      <Pane layoutX="1023.0" layoutY="67.0" prefHeight="596.0" prefWidth="266.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
+         <children>
+            <Label layoutX="48.0" layoutY="25.0" prefHeight="30.0" prefWidth="127.0" text="Membres d'équipe">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="j1" layoutX="12.0" layoutY="75.0" text="Label" />
+            <Label fx:id="j2" layoutX="12.0" layoutY="125.0" text="Label" />
+            <Label fx:id="j9" layoutX="12.0" layoutY="475.0" text="Label" />
+            <Label fx:id="j6" layoutX="12.0" layoutY="325.0" text="Label" />
+            <Label fx:id="j3" layoutX="12.0" layoutY="175.0" text="Label" />
+            <Label fx:id="j10" layoutX="12.0" layoutY="525.0" text="Label" />
+            <Label fx:id="j4" layoutX="12.0" layoutY="225.0" text="Label" />
+            <Label fx:id="j7" layoutX="12.0" layoutY="375.0" text="Label" />
+            <Label fx:id="j5" layoutX="12.0" layoutY="275.0" text="Label" />
+            <Label fx:id="j8" layoutX="12.0" layoutY="425.0" text="Label" />
+            <Label fx:id="d1" layoutX="175.0" layoutY="75.0" text="Label" />
+            <Label fx:id="d2" layoutX="175.0" layoutY="125.0" text="Label" />
+            <Label fx:id="d9" layoutX="175.0" layoutY="475.0" text="Label" />
+            <Label fx:id="d6" layoutX="175.0" layoutY="325.0" text="Label" />
+            <Label fx:id="d3" layoutX="175.0" layoutY="175.0" text="Label" />
+            <Label fx:id="d10" layoutX="175.0" layoutY="525.0" text="Label" />
+            <Label fx:id="d4" layoutX="175.0" layoutY="225.0" text="Label" />
+            <Label fx:id="d7" layoutX="175.0" layoutY="375.0" text="Label" />
+            <Label fx:id="d5" layoutX="175.0" layoutY="275.0" text="Label" />
+            <Label fx:id="d8" layoutX="175.0" layoutY="425.0" text="Label" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1006.0" style="-fx-background-color: #000066;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.reservation.AddReservationController">
+   <children>
+      <Text fill="#f0ecec" layoutX="24.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réserver un terrain">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Pane layoutY="103.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <SplitPane dividerPositions="0.23705179282868527, 0.45617529880478086, 0.6812749003984063, 0.8944223107569721" layoutX="139.0" layoutY="106.0" maxHeight="72.0" minHeight="72.0" prefHeight="72.0" prefWidth="1006.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="106.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <JFXComboBox fx:id="cbVille" layoutX="29.0" layoutY="22.0" prefHeight="26.0" prefWidth="159.0" promptText="Ville" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.400000000000006" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <JFXComboBox fx:id="cbCategorie" layoutX="38.0" layoutY="22.0" prefWidth="159.0" promptText="Catégorie" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.400000000000006" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <JFXComboBox fx:id="cbComplexe" layoutX="42.0" layoutY="23.0" prefWidth="159.0" promptText="Complexe sportif" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.400000000000006" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="492.0" prefWidth="534.0">
+               <children>
+                  <JFXButton fx:id="btnChercher" layoutX="27.0" layoutY="23.0" onAction="#chercher" prefHeight="26.0" prefWidth="138.0" text="Chercher" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="29.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="146.0">
+               <children>
+                  <JFXButton fx:id="btnChercher1" layoutX="14.0" layoutY="15.0" maxWidth="40.0" onAction="#chercher" prefHeight="41.0" prefWidth="40.0" text="  ">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <HBox layoutX="-0.6000000238418579" layoutY="177.39999389648438">
+         <children>
+            <VBox prefHeight="423.0" prefWidth="1006.0">
+               <children>
+                  <ScrollPane fx:id="scroll" prefHeight="570.0" prefWidth="785.0" styleClass="transparent" stylesheets="@../../../../Fruits-Market/src/values/style.css">
+                     <content>
+                        <GridPane fx:id="grid" prefHeight="418.0" prefWidth="1005.0">
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                           </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

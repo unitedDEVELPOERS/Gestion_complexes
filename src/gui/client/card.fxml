@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="card" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#afficherTerrain" prefHeight="185.0" prefWidth="400.0" spacing="15.0" style="-fx-background-radius: 15; -fx-background-color: #d1e0e0;" styleClass="shadow" stylesheets="@../values/styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Client.CardController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="cardImage" fitHeight="124.0" fitWidth="150.0" layoutX="17.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/EQ1eym4X0AAWhn0.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <VBox prefHeight="186.0" prefWidth="218.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fx:id="txtAdresse" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" wrappingWidth="183.20000000000005" />
+                  <Text fx:id="txtDesignation" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designation" wrappingWidth="183.20000000000005" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

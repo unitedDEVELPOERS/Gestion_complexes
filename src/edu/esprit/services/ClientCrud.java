@@ -5,9 +5,8 @@
  */
 package edu.esprit.services;
 
-import edu.esprit.entities.Arbitre;
+
 import edu.esprit.entities.Client;
-import edu.esprit.entities.User;
 import edu.esprit.tools.MyConnection;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -80,12 +79,12 @@ public class ClientCrud implements Service<Client>{
             String pwd=rs.getString(3);
             String nom=rs.getString(5);
             String prenom=rs.getString(6);
-            String equipe=rs.getString(8);
+            int equipe=rs.getInt(8);
             int soldeP=rs.getInt(12);
             String position=rs.getString(13);
             String telephone=rs.getString(14);
             
-            Client a=new Client(email,pwd,telephone,nom,prenom,equipe,soldeP,position);
+            Client a=new Client(rs.getInt(1),email,pwd,telephone,nom,prenom,equipe,soldeP,position);
             list.add(a);
         }return list;    
     
@@ -93,5 +92,90 @@ public class ClientCrud implements Service<Client>{
     
     }
     
+    /*public ObservableList<Client> readEquipe(int id) throws SQLException {
+        ObservableList<Client> list = FXCollections.observableArrayList();
+        String req="SELECT * FROM utilisateur where id = "+id;
+        try{
+        ResultSet rs=ste.executeQuery(req);
+        while(rs.next()){
+            
+            String email=rs.getString(2);
+            String pwd=rs.getString(3);
+            String nom=rs.getString(5);
+            String prenom=rs.getString(6);
+           int equipe=rs.getInt(8);
+            int soldeP=rs.getInt(12);
+            String position=rs.getString(13);
+            String telephone=rs.getString(14);
+            
+            Client a=new Client(rs.getInt(1),email,pwd,telephone,nom,prenom,equipe,soldeP,position);
+            list.add(a);
+        }
+        } catch (SQLException e) {
+		System.out.println("erreur"+e.getMessage());
+	}
+        return list;    
     
+    
+    
+    }
+    //****
+    public Client find(int id){
+		Client a=null;
+	String req="select * from utilisateur where id="+id;
+	try {
+		ResultSet rs=ste.executeQuery(req);
+		
+		
+		if(rs.next())
+                {
+                    String email=rs.getString(2);
+            String pwd=rs.getString(3);
+            String nom=rs.getString(5);
+            String prenom=rs.getString(6);
+            int equipe=rs.getInt(8);
+            int soldeP=rs.getInt(12);
+            String position=rs.getString(13);
+            String telephone=rs.getString(14);
+                    
+                    a=new Client(id,email,pwd,telephone,nom,prenom,equipe,soldeP,position);
+                    System.out.println(a);
+                }	
+                
+	} catch (SQLException e) {
+		System.out.println("erreur"+e.getMessage());
+	}
+	return a;
+	
+	}
+    
+    public ObservableList<Client> getEquipe(int eq) throws SQLException {
+        ObservableList<Client> list = FXCollections.observableArrayList();
+        String req="SELECT * FROM utilisateur where equipe = "+eq;
+        try{
+        ResultSet rs=ste.executeQuery(req);
+        while(rs.next()){
+            
+            String email=rs.getString(2);
+            String pwd=rs.getString(3);
+            String nom=rs.getString(5);
+            String prenom=rs.getString(6);
+            int equipe=rs.getInt(8);
+            int soldeP=rs.getInt(12);
+            String position=rs.getString(13);
+            String telephone=rs.getString(14);
+            
+            Client a=new Client(rs.getInt(1),email,pwd,telephone,nom,prenom,equipe,soldeP,position);
+            list.add(a);
+        }
+        } catch (SQLException e) {
+		System.out.println("erreur"+e.getMessage());
+	}
+        return list;    
+    
+    
+    
+    }
+    
+   */ 
 }

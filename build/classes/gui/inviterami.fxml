@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.InviteramiController">
+   <children>
+      <ImageView fitHeight="755.0" fitWidth="1353.0" layoutX="-3.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/9.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="1329.0" style="-fx-background-color: #7f8fa6; -fx-opacity: 0.7;">
+         <children>
+            <ToolBar layoutX="102.0" layoutY="1.0" prefHeight="47.0" prefWidth="549.0" style="-fx-background-color: transparent;">
+               <items>
+                  <Button fx:id="btAcceuil" mnemonicParsing="false" onAction="#Acceuil" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: transparent;" text="Acceuil" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btReservation" mnemonicParsing="false" onAction="#Reservation" style="-fx-background-color: transparent;" text="Reservation" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btEquipe" mnemonicParsing="false" onAction="#Equipe" style="-fx-background-color: white; -fx-opacity: 0.6;" text="Equipe" textFill="#838080">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btBoutique" mnemonicParsing="false" onAction="#Compte" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: transparent;" text="Boutique" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+               </items>
+            </ToolBar>
+            <Button fx:id="btCompte" layoutX="1228.0" layoutY="6.0" mnemonicParsing="false" onAction="#Compte" prefHeight="37.0" prefWidth="93.0" style="-fx-background-color: transparent;" text="Compte" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="23.0" layoutY="73.0" prefHeight="674.0" prefWidth="1304.0" style="-fx-background-color: #dcdde1; -fx-opacity: 0.6;" />
+      <TextField fx:id="nom" layoutX="349.0" layoutY="140.0" />
+      <TextField fx:id="prenom" layoutX="815.0" layoutY="140.0" />
+      <TextField fx:id="email" layoutX="486.0" layoutY="189.0" prefHeight="32.0" prefWidth="283.0" />
+      <Label layoutX="275.0" layoutY="144.0" prefHeight="17.0" prefWidth="50.0" text="NOM : " />
+      <Label layoutX="730.0" layoutY="144.0" text="PRENOM:" />
+      <Label layoutX="410.0" layoutY="196.0" text="E-MAIL :" />
+      <Button fx:id="chercher" layoutX="890.0" layoutY="184.0" mnemonicParsing="false" onAction="#fchercher" prefHeight="32.0" prefWidth="124.0" text="Chercher" />
+      <Button fx:id="retour" layoutX="239.0" layoutY="648.0" mnemonicParsing="false" onAction="#fretour" prefHeight="32.0" prefWidth="72.0" text="Retour" />
+      <Button fx:id="inviter" layoutX="1024.0" layoutY="648.0" mnemonicParsing="false" onAction="#finviter" prefHeight="32.0" prefWidth="72.0" text="Inviter" />
+      <Label fx:id="tnom" layoutX="534.0" layoutY="144.0" text="NOM Invalid" textFill="RED" />
+      <Label fx:id="temail" layoutX="782.0" layoutY="192.0" text="E-MAIL Invalid" textFill="RED" />
+      <Label fx:id="tprenom" layoutX="1000.0" layoutY="144.0" text="PRENOM Invalid" textFill="RED" />
+      <Label fx:id="tinvi" layoutX="926.0" layoutY="656.0" text="CHOISIR un ami" textFill="RED" />
+      <TableView fx:id="table" layoutX="219.0" layoutY="247.0" prefHeight="388.0" prefWidth="947.0">
+        <columns>
+          <TableColumn fx:id="tablenom" prefWidth="267.0" text="NOM" />
+          <TableColumn fx:id="tableprenom" prefWidth="345.0" text="PRENOM" />
+            <TableColumn fx:id="tableposition" prefWidth="334.0" text="POSITION" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

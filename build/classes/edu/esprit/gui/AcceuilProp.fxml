@@ -1,63 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="edu.esprit.gui.AcceuilPropController">
+<AnchorPane id="AnchorPane" prefHeight="739.0" prefWidth="1323.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.AcceuilPropController">
    <children>
-      <ImageView fitHeight="578.0" fitWidth="1001.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="755.0" fitWidth="1342.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Ressource/9.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="45.0" layoutY="17.0" prefHeight="534.0" prefWidth="912.0">
+      <Label layoutX="-2.0" layoutY="149.0" prefHeight="565.0" prefWidth="183.0" style="-fx-background-color: #f7f1e3; -fx-opacity: 0.3;" />
+      <VBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="149.0" prefHeight="422.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-opacity: 1;">
          <children>
-            <ImageView fitHeight="142.0" fitWidth="239.0" layoutX="48.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Ressource/ARB-WP07.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="152.0" fitWidth="252.0" layoutX="484.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Ressource/unnamed.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="152.0" fitWidth="246.0" layoutX="56.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Ressource/récompense-professionnelle-de-trophée-du-football-du-football-sur-le-champ-de-stade-98643563.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="ifArbitre" layoutX="70.0" layoutY="192.0" mnemonicParsing="false" onAction="#GestionArbitre" style="-fx-background-color: transparent;" text="Vos Arbitre" textFill="WHITE">
+            <Button fx:id="btnTerrain" mnemonicParsing="false" onAction="#BtTerrain" prefHeight="54.0" prefWidth="154.0" style="-fx-background-color: transparent;" text="Terrains" textFill="WHITE">
                <font>
-                  <Font name="Arial Black" size="18.0" />
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnReservation" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#BtReservation" prefHeight="54.0" prefWidth="154.0" style="-fx-background-color: transparent;" text="Réservations" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="56.0" layoutY="426.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Vos Competitions" textFill="WHITE">
+            <Button fx:id="btArbitre" layoutX="10.0" layoutY="64.0" mnemonicParsing="false" onAction="#BtArbitre" prefHeight="54.0" prefWidth="154.0" style="-fx-background-color: transparent;" text="Arbitre" textFill="#f8f3f3">
                <font>
-                  <Font name="Arial Black" size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="560.0" layoutY="192.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Vos Terrains" textFill="WHITE">
+            <Button fx:id="btComp" layoutX="10.0" layoutY="119.0" mnemonicParsing="false" onAction="#BtCompetition" prefHeight="54.0" prefWidth="154.0" style="-fx-background-color: transparent;" text=" Compétition" textFill="#f8f3f3">
                <font>
-                  <Font name="Arial Black" size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #8395a7;" text="Retour" textFill="WHITE">
+            <Button fx:id="btEquipe" layoutX="10.0" layoutY="173.0" mnemonicParsing="false" onAction="#BtEquipe" prefHeight="54.0" prefWidth="154.0" style="-fx-background-color: transparent;" text="Equipe" textFill="#f8f3f3">
                <font>
-                  <Font size="13.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Label layoutX="233.0" text="Bienvenue dans botre univers" textFill="WHITE">
+            <Button fx:id="btMatch" mnemonicParsing="false" onAction="#BtMatch" prefHeight="54.0" prefWidth="154.0" style="-fx-background-color: transparent;" text="Match" textFill="#f8f3f3">
                <font>
-                  <Font name="Arial Black" size="31.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
-            </Label>
+            </Button>
+            <Button fx:id="btCompte" mnemonicParsing="false" onAction="#BtCompte" prefHeight="54.0" prefWidth="154.0" style="-fx-background-color: #25a3ec;" text="Compte" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btDeco" mnemonicParsing="false" onAction="#Deconnecter" prefHeight="48.0" prefWidth="156.0" style="-fx-background-color: transparent;" text="Se deconnecter" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
          </children>
-      </AnchorPane>
+      </VBox>
+      <Label layoutX="149.0" layoutY="82.0" prefHeight="43.0" prefWidth="285.0" text="Bienvenue Matricule" textAlignment="CENTER" textFill="#dad5d5">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="89.0" fitWidth="89.0" layoutX="33.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ressource/copy_351266755.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="187.0" layoutY="148.0" prefHeight="565.0" prefWidth="930.0" style="-fx-background-color: #f7f1e3; -fx-opacity: 0.2;" />
+      <Button fx:id="btModifier" layoutX="434.0" layoutY="571.0" mnemonicParsing="false" onAction="#ModifierInfo" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: #25a3ec;" text="Modifier vos informations" textFill="WHITE" />
+      <TextField fx:id="tfMatricule" editable="false" layoutX="263.0" layoutY="432.0" prefHeight="31.0" prefWidth="216.0" />
+      <Label layoutX="261.0" layoutY="410.0" text="Matricule fiscale" textFill="#fbfcff" />
+      <TextField fx:id="tfRaison" editable="false" layoutX="263.0" layoutY="329.0" prefHeight="31.0" prefWidth="216.0" promptText="ef1sf7e1f" />
+      <Label layoutX="263.0" layoutY="312.0" text="Raison Sociale" textFill="#fbfcff">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btRetour" layoutX="1013.0" layoutY="155.0" mnemonicParsing="false" onAction="#Retour" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #25a3ec;" text="Retour" textFill="WHITE" />
+      <Label layoutX="267.0" layoutY="186.0" text="Vos informations personnels" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btSupprimer" layoutX="749.0" layoutY="571.0" mnemonicParsing="false" onAction="#SupprimerCompte" prefHeight="31.0" prefWidth="153.0" style="-fx-background-color: #25a3ec;" text="Supprimer votre compte" textFill="WHITE" />
+      <PasswordField fx:id="tfMdp" editable="false" layoutX="783.0" layoutY="432.0" prefHeight="31.0" prefWidth="216.0" />
+      <Label layoutX="783.0" layoutY="410.0" text="Mot de passe" textFill="#fbfcff" />
+      <TextField fx:id="tfEmail" editable="false" layoutX="783.0" layoutY="336.0" prefHeight="31.0" prefWidth="216.0" promptText="****@*****.com" />
+      <Label layoutX="783.0" layoutY="312.0" text="Email" textFill="#f2f2f2" />
    </children>
 </AnchorPane>

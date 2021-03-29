@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="569.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.ReservationNavBarController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="653.0">
+               <children>
+                  <Button fx:id="btnNosReservations" layoutY="27.0" mnemonicParsing="false" onAction="#nosReservations" prefHeight="47.0" prefWidth="333.0" style="-fx-background-color: transparent;" text="Gestion des réservations" textFill="#f5f2f2">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/bulleted_list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnNouveau" layoutX="369.0" layoutY="27.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="144.0" style="-fx-background-color: transparent;" text="Nouveau" textFill="#f5f2f2">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/ajouter.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="352.0" layoutY="29.0" orientation="VERTICAL" prefHeight="44.0" prefWidth="6.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="100.0" prefWidth="682.0" />
+            <Pane prefHeight="100.0" prefWidth="217.0" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <Pane prefHeight="470.0" prefWidth="12.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="470.0" prefWidth="10.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

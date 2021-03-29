@@ -30,8 +30,8 @@ import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
-import javax.mail.Message;
 import javax.mail.MessagingException;
 
 
@@ -91,6 +91,16 @@ public class AjouterArbitreController implements Initializable {
     private TableColumn<Arbitre, String> col_complexe;
     
      int index = -1;
+    @FXML
+    private Label snom;
+    @FXML
+    private Label stelephone;
+    @FXML
+    private Label smdp;
+    @FXML
+    private Label semail;
+    @FXML
+    private Label sprenom;
     
     
     
@@ -106,14 +116,55 @@ public class AjouterArbitreController implements Initializable {
     }
     @FXML
     private void ModifArbitre(ActionEvent event) {
-        try {
-            String mail=tfEmail.getText();
+        snom.setVisible(false);
+        semail.setVisible(false);
+        sprenom.setVisible(false);
+        stelephone.setVisible(false);
+        smdp.setVisible(false);
+      String masque = "^[a-zA-Z]+[a-zA-Z0-9\\._-]*[a-zA-Z0-9]@[a-zA-Z]+"
+                        + "[a-zA-Z0-9\\._-]*[a-zA-Z0-9]+\\.[a-zA-Z]{2,4}$";
+        String mail=tfEmail.getText();
             String telephone=tfTelephone.getText();
             String nom=tfNom.getText();
             String prenom=tfPrenom.getText();
             String categorie=(String) tfCategorie.getValue();
             String complexe=tfComplexe.getText();
             String mdp=tfMdp.getText();
+              if(nom.isEmpty()){
+                  snom.setVisible(true);
+                  snom.setText("champ vide");
+                  
+              } else if(mail.isEmpty()){
+                  semail.setVisible(true);
+            semail.setText("champ vide");
+
+            
+        }else if(!mail.matches(masque)){
+               semail.setVisible(true);
+              semail.setText("email incorrect!!");
+        }else if(prenom.isEmpty()){
+            sprenom.setVisible(true);
+            sprenom.setText("champ vide");
+        }
+        else if(mdp.isEmpty()){
+            smdp.setVisible(true);
+            smdp.setText("champ vide");
+        }else if(telephone.isEmpty()){
+            stelephone.setVisible(true);
+            stelephone.setText("champ vide");
+        }else if (!telephone.matches("[0-9]+"))
+        {
+              stelephone.setVisible(true);
+            stelephone.setText("num incorrect!! ");
+        }else if( telephone.length()!=8){
+              stelephone.setVisible(true);
+            stelephone.setText("8 chiffres");
+        }else {
+        
+           
+        try {
+            
+            
             String role="arbitre";
             Arbitre uu=new Arbitre(mail,mdp,role,telephone,nom,prenom,complexe,categorie);
             ArbitreCrud pp=new  ArbitreCrud();
@@ -125,7 +176,7 @@ public class AjouterArbitreController implements Initializable {
         }
         
         
-    }
+    }}
 
     @FXML
     private void SuppArbitre(ActionEvent event) {
@@ -158,15 +209,58 @@ public class AjouterArbitreController implements Initializable {
 
     @FXML
     private void AjouArbitre(ActionEvent event) {
-       
-        try {
-            String mail=tfEmail.getText();
+          snom.setVisible(false);
+        semail.setVisible(false);
+        sprenom.setVisible(false);
+        stelephone.setVisible(false);
+        smdp.setVisible(false);
+      String masque = "^[a-zA-Z]+[a-zA-Z0-9\\._-]*[a-zA-Z0-9]@[a-zA-Z]+"
+                        + "[a-zA-Z0-9\\._-]*[a-zA-Z0-9]+\\.[a-zA-Z]{2,4}$";
+        String mail=tfEmail.getText();
             String telephone=tfTelephone.getText();
             String nom=tfNom.getText();
             String prenom=tfPrenom.getText();
+           
+            
+            String mdp=tfMdp.getText();
+              if(nom.isEmpty()){
+                  snom.setVisible(true);
+                  snom.setText("champ vide");
+                  
+              } else if(mail.isEmpty()){
+                  semail.setVisible(true);
+            semail.setText("champ vide");
+
+            
+        }else if(!mail.matches(masque)){
+               semail.setVisible(true);
+              semail.setText("email incorrect!!");
+        }else if(prenom.isEmpty()){
+            sprenom.setVisible(true);
+            sprenom.setText("champ vide");
+        }
+        else if(mdp.isEmpty()){
+            smdp.setVisible(true);
+            smdp.setText("champ vide");
+        }else if(telephone.isEmpty()){
+            stelephone.setVisible(true);
+            stelephone.setText("champ vide");
+        }else if (!telephone.matches("[0-9]+"))
+        {
+              stelephone.setVisible(true);
+            stelephone.setText("num incorrect!! ");
+        }else if( telephone.length()!=8){
+              stelephone.setVisible(true);
+            stelephone.setText("8 chiffres");
+        }else {
+        
+       
+        try {
+            
+            
             String categorie=(String) tfCategorie.getValue();
             String complexe=tfComplexe.getText();
-            String mdp=tfMdp.getText();
+            
             String role="arbitre";
             Arbitre uu=new Arbitre(mail,mdp,role,telephone,nom,prenom,complexe,categorie);
             
@@ -185,7 +279,7 @@ UpdateTable();
         }
         
         
-    }
+    }}
 
     @FXML
     private void Rerurn(ActionEvent event) {
@@ -249,52 +343,9 @@ UpdateTable();
     
     }
     
-     /*void search_user() {          
-        col_desgniation.setCellValueFactory(new PropertyValueFactory<Competition,String>("designation"));
-        col_datec.setCellValueFactory(new PropertyValueFactory<Competition,String>("date_creation"));
-        col_dated.setCellValueFactory(new PropertyValueFactory<Competition,String>("date_debut"));
-        col_nbeq.setCellValueFactory(new PropertyValueFactory<Competition,String>("nbre_equipes"));
-        col_catg.setCellValueFactory(new PropertyValueFactory<Competition,String>("categorie"));
-        col_complex.setCellValueFactory(new PropertyValueFactory<Competition,String>("complexe"));
-        listM = CRUD.getDatacompetition();
-        table_liste_competition.setItems(listM);
-        
-        
-        
-        
-        
-        FilteredList<Competition> filteredData = new FilteredList<>(dataList, b -> true);  
-        filterField.textProperty().addListener((observable, oldValue, newValue) -> {
-        filteredData.setPredicate(Competit -> {
-        if (newValue == null || newValue.isEmpty()) {
-     return true;
-    }    
-        
-        
-        
-        
-        
-    String lowerCaseFilter = newValue.toLowerCase();
+
     
-    if (Competit.getDesignation().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
-     return true; // Filter matches desg
-    } else if (Competit.getDate_debut().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-     return true; // Filter matches date debut
-    }else if (Competit.getDate_creation().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-     return true; // Filter matches date creation
-    }
-    else if (String.valueOf(Competit.getCategorie()).indexOf(lowerCaseFilter)!=-1)
-         return true;// Filter matches categorie
-                                
-         else  
-          return false; // Does not match.
-   });
-  }); 
-        
-        
-  SortedList<Competition> sortedData = new SortedList<>(filteredData);  
-  sortedData.comparatorProperty().bind(table_liste_competition.comparatorProperty());  
-  table_liste_competition.setItems(sortedData);      
-    }*/
+
+    
     
 }

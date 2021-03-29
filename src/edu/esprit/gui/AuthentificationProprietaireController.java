@@ -46,6 +46,14 @@ public class AuthentificationProprietaireController implements Initializable {
     private Button btAdmin;
     @FXML
     private Button btClient;
+    @FXML
+    private Button retour;
+    @FXML
+    private Button btProp;
+    @FXML
+    private Label semail;
+    @FXML
+    private Label smdp;
 
     /**
      * Initializes the controller class.
@@ -61,14 +69,26 @@ public class AuthentificationProprietaireController implements Initializable {
     private void Login(ActionEvent event) {
         MyConnection con=new MyConnection();
         Connection cnx=con.getConnection();
+        String email=login.getText();
+         if(email.isEmpty()){
+            semail.setVisible(true);
+            semail.setText("champ vide");
+
+            
+        }else {
         try {
-            String client="Proprietaire";
+            String client="proprietaire";
+            String admin="admin";
             Statement statement=cnx.createStatement();
-            String sql="SELECT* FROM utilisateur WHERE email='"+login.getText()+"' AND password='"+mdp.getText()+"' AND role='"+client+"';";
+            String sql="SELECT* FROM utilisateur WHERE email='"+login.getText()+"' AND password='"+mdp.getText()+"';";
             ResultSet resultset=statement.executeQuery(sql);
             
+           
+            
             if(resultset.next()){
-                 this.p.setEmail(login.getText());
+             if((resultset.getString(4).equals(client))){
+               
+                 //this.p.setEmail(login.getText());
                  
                  
                 
@@ -83,9 +103,22 @@ public class AuthentificationProprietaireController implements Initializable {
                 } catch (IOException ex) {
                     Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
                 }
+            }
+             else if((resultset.getString(4).equals(admin))){
+                 FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("GestionProprietaire.fxml"));
               
+                    Parent root;
+                try {
+                    root = loader.load();
+                      login.getScene().setRoot(root);
+                     
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            
+             }
+                }
+             
         else {
                 
                 JOptionPane.showMessageDialog(null, "Email ou mot de passe incorrect");
@@ -103,7 +136,7 @@ public class AuthentificationProprietaireController implements Initializable {
             Logger.getLogger(AuthentificationClientController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-    }
+    }}
     @FXML
      private void AuthClient(ActionEvent event) {
          FXMLLoader loader = new FXMLLoader(
@@ -161,6 +194,8 @@ public class AuthentificationProprietaireController implements Initializable {
     public void setP(Proprietaire p) {
         this.p = p;
     }
+
+    
     
       
       

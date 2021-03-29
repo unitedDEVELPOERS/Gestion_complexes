@@ -24,6 +24,9 @@ public class User{
         this.email=email;
         this.pwd=pwd;
     }
+     public User(int idUser) {
+       this.idUser=idUser;
+    }
 
 
     public User() {
@@ -32,7 +35,13 @@ public class User{
          this.email=email;
     }
      
-    
+     public User(int idUser,String email,String pwd,String telephone) {
+        this.idUser=idUser;
+        this.email=email;
+        this.pwd=pwd;
+        
+        this.telephone=telephone;
+    }
 
     public User(int idUser,String email,String pwd,String role,String telephone) {
         this.idUser=idUser;

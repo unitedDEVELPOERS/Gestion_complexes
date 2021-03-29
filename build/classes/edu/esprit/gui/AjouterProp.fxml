@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="782.0" prefWidth="1366.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="edu.esprit.gui.AjouterPropController">
+   <children>
+      <ImageView fitHeight="773.0" fitWidth="1369.0" layoutX="-15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ressource/9.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table_liste_arbitre" layoutX="815.0" layoutY="219.0" onMouseClicked="#getSelected" prefHeight="392.0" prefWidth="516.0" style="-fx-background-color: #dfe6e9;">
+         <columns>
+            <TableColumn fx:id="col_email" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="col_telephone" prefWidth="111.0" text="Telephone" />
+            <TableColumn fx:id="col_nom" prefWidth="98.0" text="nom" />
+            <TableColumn fx:id="col_prenom" text="prenom" />
+            <TableColumn fx:id="col_categorie" prefWidth="75.0" text="categorie" />
+            <TableColumn fx:id="col_complexe" prefWidth="75.0" text="complexe" />
+         </columns>
+      </TableView>
+      <TextField fx:id="tfNom" layoutX="345.0" layoutY="331.0" />
+      <TextField fx:id="tfPrenom" layoutX="345.0" layoutY="245.0" />
+      <TextField fx:id="tfEmail" layoutX="589.0" layoutY="232.0" />
+      <PasswordField fx:id="tfMdp" layoutX="593.0" layoutY="331.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="592.0" layoutY="215.0" text="Email" textFill="WHITE" />
+      <Label layoutX="595.0" layoutY="314.0" text="Mot de passe" textFill="WHITE" />
+      <TextField fx:id="tfPrenom1" layoutX="593.0" layoutY="405.0" />
+      <Label layoutX="345.0" layoutY="314.0" text="Matricule fiscale" textFill="WHITE" />
+      <Label layoutX="345.0" layoutY="224.0" text="Raison Sociale" textFill="WHITE" />
+      <Label layoutX="595.0" layoutY="384.0" text="Confirmer mot de passe" textFill="WHITE" />
+   </children>
+</AnchorPane>

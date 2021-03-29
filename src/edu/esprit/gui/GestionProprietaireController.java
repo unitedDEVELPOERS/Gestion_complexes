@@ -61,7 +61,7 @@ public class GestionProprietaireController implements Initializable {
             l=p.readAll();
            for(int i=0;i<l.size();i++){
                
-               if(l.get(i).getEmail().equals(authProp.getP().getEmail())){
+               
                    
               
           
@@ -70,7 +70,7 @@ public class GestionProprietaireController implements Initializable {
             tfEmail.setText(l.get(i).getRaison());
             tfMdp.setText(l.get(i).getRaison());
              }
-                }
+                
                
         } catch (SQLException ex) {
             Logger.getLogger(GestionProprietaireController.class.getName()).log(Level.SEVERE, null, ex);

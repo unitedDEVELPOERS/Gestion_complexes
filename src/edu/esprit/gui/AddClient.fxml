@@ -12,50 +12,62 @@
 
 <AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.AddClientController">
    <children>
-      <ImageView fitHeight="564.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="773.0" fitWidth="1369.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Ressource/9.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="14.0" layoutY="69.0" prefHeight="471.0" prefWidth="550.0">
-         <children>
-            <TextField fx:id="txtNon" layoutX="32.0" layoutY="130.0" onMouseDragReleased="#Control1" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-            <ChoiceBox fx:id="choice" layoutX="32.0" layoutY="286.0" onMouseDragReleased="#Control3" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white;" />
-            <Label layoutX="32.0" layoutY="113.0" text="Nom" textFill="WHITE" />
-            <Label layoutX="341.0" layoutY="113.0" text="Email" textFill="WHITE" />
-            <Label layoutX="32.0" layoutY="269.0" text="Position" textFill="WHITE" />
-            <Label layoutX="33.0" layoutY="193.0" text="Prenom" textFill="WHITE" />
-            <Label layoutX="341.0" layoutY="269.0" text="Confirmer mot de passe" textFill="WHITE" />
-            <Label layoutX="341.0" layoutY="193.0" text="Mot de passe" textFill="WHITE" />
-            <Label layoutX="31.0" layoutY="347.0" text="Téléphone" textFill="WHITE" />
-            <PasswordField fx:id="txtMdp" layoutX="324.0" layoutY="209.0" onMouseDragReleased="#Control6" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-            <PasswordField fx:id="txtConfirme" layoutX="324.0" layoutY="286.0" onMouseDragReleased="#Control7" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-            <Label layoutX="134.0" layoutY="36.0" text="Inscrivez-vous" textFill="WHITE">
-               <font>
-                  <Font name="Book Antiqua" size="37.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtTelephone" layoutX="25.0" layoutY="364.0" onMouseDragReleased="#Control4" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="txtPrenom" layoutX="32.0" layoutY="209.0" onMouseDragReleased="#Control2" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="txtEmail" layoutX="324.0" layoutY="130.0" onMouseDragReleased="#Control5" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="btAjouter" layoutX="405.0" layoutY="409.0" mnemonicParsing="false" onAction="#AjouterClient" style="-fx-background-color: #8395a7;" text="Enregistrer" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btAnnuler" layoutX="254.0" layoutY="409.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: #8395a7;" text="Annuler" textFill="#fffdfd">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Label fx:id="l1" layoutX="32.0" layoutY="164.0" prefHeight="17.0" prefWidth="178.0" textFill="#bf0404" />
-            <Label fx:id="l5" layoutX="324.0" layoutY="164.0" prefHeight="17.0" prefWidth="178.0" textFill="#cd0f0f" />
-            <Label fx:id="l4" layoutX="29.0" layoutY="391.0" prefHeight="17.0" prefWidth="178.0" textFill="#cd0f0f" />
-            <Label fx:id="l3" layoutX="32.0" layoutY="313.0" prefHeight="17.0" prefWidth="178.0" textFill="#cd0f0f" />
-            <Label fx:id="l2" layoutX="32.0" layoutY="243.0" prefHeight="17.0" prefWidth="178.0" textFill="#c30d0d" />
-            <Label fx:id="l6" layoutX="324.0" layoutY="235.0" prefHeight="17.0" prefWidth="178.0" textFill="#cd0f0f" />
-            <Label fx:id="l7" layoutX="324.0" layoutY="313.0" prefHeight="17.0" prefWidth="178.0" textFill="#cd0f0f" />
-         </children>
-      </AnchorPane>
+      <ImageView fitHeight="134.0" fitWidth="124.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ressource/copy_351266755.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="187.0" layoutY="188.0" prefHeight="567.0" prefWidth="636.0" style="-fx-background-color: #f7f1e3; -fx-opacity: 0.3;" />
+      <Label layoutX="385.0" layoutY="246.0" text="Inscrivez-vous" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="37.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNon" layoutX="229.0" layoutY="353.0" onMouseDragReleased="#Control1" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="228.0" layoutY="345.0" text="Nom" textFill="WHITE" />
+      <Label layoutX="232.0" layoutY="415.0" text="Prenom" textFill="WHITE" />
+      <TextField fx:id="txtPrenom" layoutX="229.0" layoutY="423.0" onMouseDragReleased="#Control2" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="231.0" layoutY="504.0" text="Position" textFill="WHITE" />
+      <ChoiceBox fx:id="choice" layoutX="229.0" layoutY="521.0" onMouseDragReleased="#Control3" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white;" />
+      <Label layoutX="597.0" layoutY="342.0" text="Téléphone" textFill="WHITE" />
+      <TextField fx:id="txtTelephone" layoutX="596.0" layoutY="353.0" onMouseDragReleased="#Control4" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="594.0" layoutY="411.0" text="Email" textFill="WHITE" />
+      <TextField fx:id="txtEmail" layoutX="596.0" layoutY="423.0" onMouseDragReleased="#Control5" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="596.0" layoutY="479.0" text="Mot de passe" textFill="WHITE" />
+      <PasswordField fx:id="txtMdp" layoutX="596.0" layoutY="491.0" onMouseDragReleased="#Control6" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="597.0" layoutY="540.0" text="Confirmer mot de passe" textFill="WHITE" />
+      <PasswordField fx:id="txtConfirme" layoutX="596.0" layoutY="552.0" onMouseDragReleased="#Control7" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <Button fx:id="btAjouter" layoutX="579.0" layoutY="624.0" mnemonicParsing="false" onAction="#AjouterClient" style="-fx-background-color: #34ace0;" text="Enregistrer" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btAnnuler" layoutX="334.0" layoutY="623.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: #34ace0;" text="Annuler" textFill="#fffdfd">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="snom" layoutX="229.0" layoutY="333.0" prefHeight="17.0" prefWidth="178.0" textFill="#bf0404" />
+      <Label fx:id="sprenom" layoutX="229.0" layoutY="419.0" prefHeight="17.0" prefWidth="178.0" textFill="#cd0f0f" />
+      <Label fx:id="stelephone" layoutX="596.0" layoutY="314.0" prefHeight="17.0" prefWidth="178.0" textFill="#cd0f0f" />
+      <Label fx:id="semail" layoutX="596.0" layoutY="411.0" prefHeight="17.0" prefWidth="178.0" textFill="#cd0f0f" />
+      <Label fx:id="smdp" layoutX="596.0" layoutY="479.0" prefHeight="17.0" prefWidth="178.0" textFill="#c30d0d" />
+      <Label fx:id="smdp1" layoutX="596.0" layoutY="548.0" prefHeight="17.0" prefWidth="178.0" textFill="#cd0f0f" />
+      <Label layoutX="403.0" layoutY="687.0" prefHeight="33.0" prefWidth="229.0" style="-fx-background-color: #34ace0;" />
+      <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="406.0" layoutY="689.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Desktop/img_56684.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btfacebook" layoutX="403.0" layoutY="687.0" mnemonicParsing="false" onAction="#Facebook" prefHeight="33.0" prefWidth="229.0" style="-fx-background-color: transparent;" text="Inscription avec Facebook" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

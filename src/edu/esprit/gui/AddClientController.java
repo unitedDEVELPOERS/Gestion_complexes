@@ -56,20 +56,21 @@ public class AddClientController implements Initializable {
     private TextField txtMdp;
     @FXML
     private ChoiceBox<String> choice;
-    @FXML
     private Label l1;
     @FXML
-    private Label l5;
+    private Label snom;
     @FXML
-    private Label l4;
+    private Label sprenom;
     @FXML
-    private Label l3;
+    private Label stelephone;
     @FXML
-    private Label l2;
+    private Label semail;
     @FXML
-    private Label l6;
+    private Label smdp;
     @FXML
-    private Label l7;
+    private Label smdp1;
+    @FXML
+    private Button btfacebook;
 
     /**
      * Initializes the controller class.
@@ -81,7 +82,7 @@ public class AddClientController implements Initializable {
     }    
 
     @FXML
-    private void AjouterClient(ActionEvent event) {
+    private void AjouterClient(ActionEvent event) throws SQLException {
              try {
                  // try {
                  //1- SAVE Proprietaire IN DATABASE
@@ -97,24 +98,20 @@ public class AddClientController implements Initializable {
                  
                  Client p = new Client(rEmail,rPwd,rTelephone,rNom,rPrenom,rPosition);
                  ClientCrud pcd = new ClientCrud();
+                 pcd.ajouter(p);
                  try {
-                     pcd.ajouter(p);
-                      try {
-                senEmail.mail(p.getEmail(),p.getNom());
-
-            } catch (MessagingException ex) {
-                Logger.getLogger(AjouterArbitreController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-                 } catch (SQLException ex) {
-                     Logger.getLogger(AddClientController.class.getName()).log(Level.SEVERE, null, ex);
+                     senEmail.mail(p.getEmail(),p.getNom());
+                     
+                 } catch (MessagingException ex) {
+                     Logger.getLogger(AjouterArbitreController.class.getName()).log(Level.SEVERE, null, ex);
                  }
                  
                  //2- REDIRECTION
                  
                  FXMLLoader loader = new FXMLLoader(
-                         getClass().getResource("AuthentificationClient.fxml"));
+                         getClass().getResource("AcceuilClient.fxml"));
                  Parent root = loader.load();
-                 AuthentificationClientController pdc = loader.getController();
+                 AcceuilClientController pdc = loader.getController();
                  
                  txtPrenom.getScene().setRoot(root);
                  
@@ -170,6 +167,10 @@ public class AddClientController implements Initializable {
 
     @FXML
     private void Control5(MouseDragEvent event) {
+    }
+
+    @FXML
+    private void Facebook(ActionEvent event) {
     }
   
 

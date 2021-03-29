@@ -6,9 +6,7 @@
 package edu.esprit.gui;
 
 import edu.esprit.entities.Arbitre;
-import edu.esprit.entities.Proprietaire;
 import edu.esprit.services.ArbitreCrud;
-import edu.esprit.services.ProprietaireCrud;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -24,6 +22,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javax.swing.JOptionPane;
@@ -54,6 +53,17 @@ ObservableList<String> ListeChoice=FXCollections.observableArrayList("FootBall",
     private ChoiceBox<String> tfCategorie;
     @FXML
     private TextField tfTelephone;
+    @FXML
+    private Label snom;
+    @FXML
+    private Label sprenom;
+    @FXML
+    private Label semail;
+    @FXML
+    private Label smdp;
+    @FXML
+    private Label stelephone;
+    
 
     /**
      * Initializes the controller class.
@@ -97,25 +107,60 @@ ObservableList<String> ListeChoice=FXCollections.observableArrayList("FootBall",
 
     @FXML
     private void Modifier(ActionEvent event) {
-         JOptionPane.showMessageDialog(null, "Voulez-vous vraiment modifier vos informations?");
-        
+        snom.setVisible(false);
+        semail.setVisible(false);
+        sprenom.setVisible(false);
+        stelephone.setVisible(false);
+        smdp.setVisible(false);
+      String masque = "^[a-zA-Z]+[a-zA-Z0-9\\._-]*[a-zA-Z0-9]@[a-zA-Z]+"
+                        + "[a-zA-Z0-9\\._-]*[a-zA-Z0-9]+\\.[a-zA-Z]{2,4}$";
+      String email=tfEmail.getText();
+            String telephone=tfTelephone.getText();
+            String nom=tfNom.getText();
+            String prenom=tfPrenom.getText();
+            String categorie=(String) tfCategorie.getValue();
+            String complexe=tfComplexe.getText();
+            String mdp=tfMdp.getText();
+              if(nom.isEmpty()){
+                  snom.setVisible(true);
+                  snom.setText("champ vide");
+                  
+              } else if(email.isEmpty()){
+                  semail.setVisible(true);
+            semail.setText("champ vide");
+
+            
+        }else if(!email.matches(masque)){
+               semail.setVisible(true);
+              semail.setText("email incorrect!!");
+        }else if(prenom.isEmpty()){
+            sprenom.setVisible(true);
+            sprenom.setText("champ vide");
+        }
+        else if(mdp.isEmpty()){
+            smdp.setVisible(true);
+            smdp.setText("champ vide");
+        }else if(telephone.isEmpty()){
+            stelephone.setVisible(true);
+            stelephone.setText("champ vide");
+        }else if (!telephone.matches("[0-9]+"))
+        {
+              stelephone.setVisible(true);
+            stelephone.setText("num incorrect!! ");
+        }else if( telephone.length()!=8){
+              stelephone.setVisible(true);
+            stelephone.setText("8 chiffres");
+        }else {
         try {
             ArbitreCrud pcd = new ArbitreCrud();
             
            
-            String mdp=tfMdp.getText();
-            String email=tfEmail.getText();
-            String nom=tfNom.getText();
-            String prenom=tfPrenom.getText();
-            String Telephone=tfTelephone.getText();
-            String complexe=tfComplexe.getText();
-            String telephone=tfTelephone.getText();
-            String categorie=tfCategorie.getValue();
             
             
-           Arbitre p=new Arbitre(email,mdp,Telephone,nom,prenom,complexe,categorie);
             
-           
+           Arbitre p=new Arbitre(email,mdp,telephone,nom,prenom,complexe,categorie);
+            
+           JOptionPane.showMessageDialog(null, "Voulez-vous vraiment modifier vos informations?");
             pcd.update(p);
             
             
@@ -140,6 +185,6 @@ ObservableList<String> ListeChoice=FXCollections.observableArrayList("FootBall",
         
         
         
-    }
+    }}
     
 }
